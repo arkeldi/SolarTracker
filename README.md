@@ -44,7 +44,7 @@ Once the backend server is running, you can use the following `curl` commands to
 
 1. **Open a new terminal** and run the following `curl` command to send sensor data (for example, humidity):
    ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"sensor": "humidity", "value": 55.3}' http://18.191.208.137
+   curl -X POST -H "Content-Type: application/json" -d '{"sensor": "humidity", "value": 55.3}' http://18.191.208.137/data
    ```
 
 ## Viewing Received Data
