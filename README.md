@@ -1,6 +1,6 @@
 # EC2 Instance Setup Guide
 
-This guide provides steps to set up and interact with the Amazon EC2 instance for the Solar Tracker project. The IP address for the instance is http://18.191.208.137
+This guide provides steps to set up and interact with the Amazon EC2 instance for the Solar Tracker project. The IP address for the instance is http://18.226.186.142
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This guide provides steps to set up and interact with the Amazon EC2 instance fo
 
 3. **SSH into the EC2 instance** using the following command:
    ```bash
-   ssh -i "solarkey.pem" ec2-user@18.191.208.137
+   ssh -i "solarkey.pem" ec2-user@ec2-18-226-186-142.us-east-2.compute.amazonaws.com
    ```
 
    This will log you into the EC2 instance.
@@ -44,7 +44,7 @@ Once the backend server is running, you can use the following `curl` commands to
 
 1. **Open a new terminal** and run the following `curl` command to send sensor data (for example, humidity):
    ```bash
-   curl -X POST -H "Content-Type: application/json" -d '{"sensor": "humidity", "value": 55.3}' http://18.191.208.137/data
+   curl -X POST -H "Content-Type: application/json" -d '{"sensor": "humidity", "value": 55.3}' http://18.226.186.142/data
    ```
 
 ## Viewing Received Data
