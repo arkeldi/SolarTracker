@@ -1648,5 +1648,83 @@
         "ambientWeatherWindSpeed": 0.0,
         "ambientWeatherWindDirection": 342,
         "ambientWeatherTimestamp": "2024-10-23 00:46:45"
+    },
+    {
+        "temperature_c": 22.003514645347604,
+        "temperature_f": 71.60632636162569,
+        "humidity": 42.13216624342094,
+        "pressure": 1007.7175314480571,
+        "timestamp": "2024-10-22 19:55:48",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5866000000000002,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:47:17"
+    },
+    {
+        "temperature_c": 21.92690914350096,
+        "temperature_f": 71.46843645830172,
+        "humidity": 42.065795399626744,
+        "pressure": 1007.7028454186262,
+        "timestamp": "2024-10-22 19:56:49",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5866000000000002,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:47:49"
+    },
+    {
+        "temperature_c": 21.72262812538538,
+        "temperature_f": 71.10073062569369,
+        "humidity": 42.27083341788222,
+        "pressure": 1007.7530615266395,
+        "timestamp": "2024-10-22 19:57:50",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5866000000000002,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:48:21"
+    },
+    {
+        "temperature_c": 21.686878995090957,
+        "temperature_f": 71.03638219116372,
+        "humidity": 42.6265500169713,
+        "pressure": 1007.7229065101085,
+        "timestamp": "2024-10-22 19:58:51",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5945000000000005,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:48:53"
+    },
+    {
+        "temperature_c": 21.605166750826175,
+        "temperature_f": 70.88930015148712,
+        "humidity": 43.62693805399308,
+        "pressure": 1007.7536618530378,
+        "timestamp": "2024-10-22 19:59:52",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5945000000000005,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:49:25"
+    },
+    {
+        "temperature_c": 22.029049827181733,
+        "temperature_f": 71.65228968892711,
+        "humidity": 42.90450873748064,
+        "pressure": 1007.7850887026341,
+        "timestamp": "2024-10-22 20:00:53",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5945000000000005,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:49:57"
     }
 ]
