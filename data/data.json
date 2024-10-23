@@ -1726,5 +1726,18 @@
         "ambientWeatherWindSpeed": 0.0,
         "ambientWeatherWindDirection": 342,
         "ambientWeatherTimestamp": "2024-10-23 00:49:57"
+    },
+    {
+        "temperature_c": 22.53464792576269,
+        "temperature_f": 72.56236626637285,
+        "humidity": 41.73941301902353,
+        "pressure": 1007.7847371597965,
+        "timestamp": "2024-10-22 20:01:55",
+        "ambientWeatherTemp": 23.2,
+        "ambientWeatherHumidity": 41,
+        "ambientWeatherSolarRadiation": 3.5945000000000005,
+        "ambientWeatherWindSpeed": 0.0,
+        "ambientWeatherWindDirection": 342,
+        "ambientWeatherTimestamp": "2024-10-23 00:50:29"
     }
 ]
