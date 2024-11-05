@@ -18,10 +18,14 @@ import threading
 address = 0x76
 
 # Initialize I2C bus
-bus = smbus2.SMBus(1)
-
-# Load calibration parameters
-calibration_params = bme280.load_calibration_params(bus, address)
+try:
+    bus = smbus2.SMBus(1)
+    # Load calibration parameters
+    calibration_params = bme280.load_calibration_params(bus, address)
+    sensor_initialized = True
+except Exception as e:
+    print(f"Failed to initialize BME280 sensor: {e}")
+    sensor_initialized = False
 
 # Initialize MCP3008
 try:
@@ -29,8 +33,10 @@ try:
     cs = digitalio.DigitalInOut(board.D5)
     mcp = MCP.MCP3008(spi, cs)
     channel = AnalogIn(mcp, MCP.P0)
+    mcp_initialized = True
 except Exception as e:
-    print(f"Error initializing MCP3008: {e}")
+    print(f"Failed to initialize MCP3008: {e}")
+    mcp_initialized = False
 
 # Initialize Picamera2
 try:
@@ -151,14 +157,17 @@ if __name__ == "__main__":
     weather_thread.start()
 
     while True:
-        try:
-            temperature_c, temperature_f, humidity, pressure_hpa = read_sensor_data()
-            if temperature_c is not None:
-                current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                print(f"Time={current_time_str}, Temp={temperature_c:0.1f} C, Temp={temperature_f:0.1f} F, Humidity={humidity:0.1f}%, Pressure={pressure_hpa:0.2f}hPa")
-        except Exception as e:
-            print(f"Error in reading sensor data: {e}")
-            temperature_c = temperature_f = humidity = pressure_hpa = None
+        if sensor_initialized:
+            try:
+                temperature_c, temperature_f, humidity, pressure_hpa = read_sensor_data()
+                if temperature_c is not None:
+                    current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    print(f"Time={current_time_str}, Temp={temperature_c:0.1f} C, Temp={temperature_f:0.1f} F, Humidity={humidity:0.1f}%, Pressure={pressure_hpa:0.2f}hPa")
+            except Exception as e:
+                print(f"Error in reading sensor data: {e}")
+                temperature_c = temperature_f = humidity = pressure_hpa = 0
+        else:
+            temperature_c = temperature_f = humidity = pressure_hpa = 0
 
         current_time = time.time()
 
@@ -180,7 +189,7 @@ if __name__ == "__main__":
                 print(f"Error in sending data: {e}")
 
         # Send image every 1 minute
-        if current_time - last_image_send_time >= (1 * 60):
+        if picam2 and current_time - last_image_send_time >= (1 * 60):
             try:
                 image_path = take_image()
                 send_image(image_path)
