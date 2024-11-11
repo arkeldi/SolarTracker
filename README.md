@@ -38,6 +38,8 @@ This guide provides steps to set up and interact with the Amazon EC2 instance fo
    sudo python3 app.py
    ```
 
+   this should be thingspeak_app.py
+
 ## Sending Data to the Server
 
 Once the backend server is running, you can use the following `curl` commands to send data:
